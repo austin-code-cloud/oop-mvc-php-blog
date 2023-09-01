@@ -1,9 +1,3 @@
-<?php 
-if (!isset($_SESSION['user'])) {
-    header('location: /');
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,27 +10,22 @@ if (!isset($_SESSION['user'])) {
 <body>
 
     Hello welcome to the admin page
-    <form action="../includes/admin.inc.php" method="POST">
 
-        <button name="logout">Logout</button>
-    </form>
+    <a href="logout">Logout</a>
 
     <?php
     $loginUser = $data['user'];
     $authorpost = $data['authorpost'];
     ?>
 
-<?php if (!empty($authorpost)) { ?>
+    <?php if (!empty($authorpost)) { ?>
         <?php foreach ($authorpost as $result) { ?>
             <h2> <?php echo $result['title'] ?> </h2>
             <p> <?php echo substr($result['content'], 0, 100) ?> <a href="">...Read more</a> </p>
 
-            <form action="../includes/admin.inc.php?id=<?= $result['id'] ?>" method="POST">
+            <a href="/mvc-oop-php-blog/public/admin/editpost/<?= $result['id'] ?>">Edit</a>
+            <a href="/mvc-oop-php-blog/public/admin/deletepost/<?= $result['id'] ?>">Delete</a>
 
-                <button name="edit">Edit</button>
-                <button name="delete">Delete</button>
-
-            </form>
 
         <?php } ?>
 
@@ -44,8 +33,8 @@ if (!isset($_SESSION['user'])) {
         <?php echo "No Post to Display" ?>
     <?php } ?>
 
+    <a href="/mvc-oop-php-blog/public/admin/createpost">Create Post</a>
 
-   
 
 </body>
 

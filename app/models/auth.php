@@ -1,8 +1,21 @@
 <?php
 
-class Register extends Dbh
+class Auth extends Dbh
 {
-public function checkUser($username, $email)
+
+    public function signIn($username)
+    {
+
+        $sql = "SELECT * FROM users WHERE username = ?";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute(array($username));
+
+        while ($row = $stmt->fetchAll()) {
+            return $row;
+        }
+    }
+
+    public function checkUser($username, $email)
     {
         $sql = "SELECT username FROM users WHERE username = ? or email = ?";
         $stmt = $this->connect()->prepare($sql);
@@ -12,7 +25,7 @@ public function checkUser($username, $email)
             header("location: ../index.php?error=stmtfailed");
             exit();
         }
-        
+
 
         if ($stmt->rowCount() > 0) {
             $resultCheck = 1;
@@ -23,13 +36,13 @@ public function checkUser($username, $email)
         }
     }
 
-   public function signUp($username, $email, $password)
+    public function signUp($username, $email, $password)
     {
-        
+
 
         $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
         $stmt = $this->connect()->prepare($sql);
-        
+
         $hashpwd = password_hash($password, PASSWORD_BCRYPT);
 
         $stmt = $stmt->execute(array($username, $email, $hashpwd));
@@ -39,7 +52,5 @@ public function checkUser($username, $email)
             header("location: ../index.php?error=stmtfailed");
             exit();
         }
-
-       
     }
 }

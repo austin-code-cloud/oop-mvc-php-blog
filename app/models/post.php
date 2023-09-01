@@ -3,29 +3,29 @@
 class Post extends Dbh
 {
 
-    protected function newPost($title, $content, $author_id)
+    public function newPost($title, $content, $author_id)
     {
 
         $sql = "INSERT INTO blog_posts (title, content, author_id) VALUES (?, ?, ?)";
         $stmt = $this->connect()->prepare($sql);
+        $stmt->execute(array($title, $content, $author_id));
 
-        if (!$stmt->execute(array($title, $content, $author_id))) {
+        if (!$stmt) {
             $stmt = null;
             header("location: ../index.php?error=stmtfailed");
             exit();
-        } 
+        }
         $stmt = null;
     }
 
-    protected function loadPost()
+    public function loadPost()
     {
 
-        $sql = "SELECT * FROM blog_post";
+        $sql = "SELECT title, content, id FROM blog_posts";
         $stmt = $this->connect()->query($sql);
 
-
-        while ($row = $stmt->fetch()) {
-            echo $row;
+        while ($row = $stmt->fetchAll()) {
+            return $row;
         }
     }
 
@@ -42,7 +42,7 @@ class Post extends Dbh
         }
     }
 
-    protected  function deletePost($post_id)
+    public function deletePost($post_id)
     {
         $sql = "DELETE FROM blog_posts WHERE id= ?";
         $stmt = $this->connect()->prepare($sql);
@@ -50,19 +50,19 @@ class Post extends Dbh
     }
 
 
-    protected  function displayPostForUpdate($post_id)
+    public  function displayPostForUpdate($post_id)
     {
         $sql = "SELECT title, content FROM blog_posts WHERE id= ?";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute(array($post_id));
 
-        while ($row = $stmt->fetch()) {
+        while ($row = $stmt->fetchAll()) {
             $post = $row;
             return $post;
         }
     }
 
-    protected  function updatePost($title, $content, $id)
+    public function updatePost($title, $content, $id)
     {
 
 
@@ -74,8 +74,6 @@ class Post extends Dbh
             $stmt = null;
             header("location: ../index.php?error=stmtfailed");
             exit();
-        } else {
-            header("location: ../index.php");
         }
     }
 }

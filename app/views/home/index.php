@@ -8,11 +8,8 @@
 </head>
 
 <body>
-
-    <!-- <a href="home/login">Login</a>
-    <a href="home/register">Register</a> -->
     
-    <a href="home/createpost">create post</a>
+    <a href="/mvc-oop-php-blog/public/admin/checkUsr">Manage Blog</a>
     <h1>Posts </h1>
 
     <?php
