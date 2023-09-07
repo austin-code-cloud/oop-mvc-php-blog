@@ -21,7 +21,7 @@ class Post extends Dbh
     public function loadPost()
     {
 
-        $sql = "SELECT title, content, id FROM blog_posts";
+        $sql = "SELECT title, content, id FROM blog_posts ORDER BY id DESC";
         $stmt = $this->connect()->query($sql);
 
         while ($row = $stmt->fetchAll()) {

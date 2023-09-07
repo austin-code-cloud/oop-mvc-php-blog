@@ -1,0 +1,237 @@
+* {
+  padding: 0;
+  margin: 0;
+  border-style: none;
+  box-sizing: border-box;
+  /* width: 200vh; */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@100;200&family=Tulpen+One&display=swap");
+
+body {
+  background-image: url(../img/pexels-pixabay-268533.jpg);
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 769px) {
+  /* for mobile */
+  body {
+    font-size: 12px;
+    /* padding: 10px; */
+
+    width: 100%;
+    height: 100vh;
+  }
+
+  .header {
+    width: 50%;
+    height: 50vh;
+    position: sticky;
+    top: 0;
+  }
+
+  .logo1 {
+    font-size: 5px;
+    /* padding-top: 30px; */
+  }
+
+  .logo2 li {
+    font-size: 15px;
+    margin-right: 5px;
+    margin-left: -18px;
+    margin-top: 10px;
+    gap: 16px;
+  }
+
+  .btn li a {
+    font-size: 12px;
+  }
+  .section-one {
+    width: 50%;
+    height: 15vh;
+  }
+  .section-two {
+    width: 50%;
+    height: 15vh;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* for tablets */
+  body {
+    font-size: 12px;
+    /* padding: 20px; */
+  }
+  .header {
+    width: 100%;
+    height: 50vh;
+    position: sticky;
+    top: 0;
+  }
+
+  .logo1 {
+    font-size: 55px;
+    /* padding-top: 30px; */
+  }
+
+  .logo2 li {
+    font-size: 18px;
+    margin-right: 5px;
+    margin-left: -15px;
+    margin-top: 5px;
+    gap: 16px;
+  }
+  .logo3 {
+    font-size: 15px;
+  }
+
+  .btn li a {
+    font-size: 15px;
+  }
+  .section-one {
+    width: 50%;
+    height: 5vh;
+  }
+  .section-two {
+    width: 50%;
+    height: 5vh;
+  }
+}
+
+.header {
+  width: 100%;
+  height: 18vh;
+  position: sticky;
+  top: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  z-index: 13;
+  /* From https://css.glass */
+  background: rgb(66, 130, 145, 0.4);
+  border-radius: none;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header:hover::after {
+  transform: scaleX(1);
+  opacity: 0.8;
+  background-color: #428291;
+}
+
+.logo1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  color: white;
+  font-family: "Tulpen One", cursive;
+  text-shadow: 3px 4px 7px rgba(81, 67, 21, 0.8);
+  /* text-shadow: 0px 11px 10px rgba(81,67,21,0.8); */
+  font-size: 90px;
+  letter-spacing: 8px;
+  margin-top: -15px;
+}
+
+.logo2 {
+  list-style-type: none;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  float: right;
+  display: flex;
+  margin-right: 25px;
+  margin-top: -15px;
+  gap: 20px;
+  text-shadow: 0px 11px 10px rgba(81, 67, 21, 0.8);
+  color: #fff;
+}
+
+.logo2 li:hover {
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  cursor: pointer;
+}
+
+.logo3 {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 3px 4px 7px rgba(81, 67, 21, 0.8);
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.section-one {
+  background-color: #66685e;
+  list-style-type: none;
+  margin: 50px;
+  width: 95%;
+  height: 35vh;
+  max-width: 95%;
+  margin-top: 7%;
+  /* From https://css.glass */
+  background: rgba(248, 190, 190, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(3.4px);
+  /* border: 1px solid rgba(248, 190, 190, 0.3); */
+  border: none;
+}
+
+.content ul li {
+  padding: 20px;
+  margin-bottom: 24px;
+  list-style-type: none;
+  /* background-color: blue; */
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content ul li:last-child {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  margin-right: 70px;
+  /* flex-direction: column; */
+}
+
+.section-two {
+  background-color: #9ca666;
+  list-style-type: none;
+  margin: 50px;
+  width: 100%;
+  height: 35vh;
+  max-width: 95%;
+  margin-top: 8%;
+  background: rgba(248, 190, 190, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(3.4px);
+  /* border: 1px solid rgba(248, 190, 190, 0.3); */
+}
+
+button {
+  /* padding: 10px 20px; */
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
+  box-shadow: transparent;
+  /* border: 1px solid #ffffff80; */
+  transition: 0.5s ease;
+  user-select: none;
+  margin-top: 80px;
+}
+
+
+.main {
+  margin-left: 120px;
+  margin-right: 120px;
+}

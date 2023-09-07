@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  border-style: none;
+  box-sizing: border-box;
+  /* width: 200vh; */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@100;200&family=Tulpen+One&display=swap');
+
+body {
+
+  background-image: url(img/pexels-pixabay-268533.jpg);
+  background-repeat: repeat;
+}
+
+
+
+@media screen and (min-width:480px) and (max-width:769px) {
+
+  /* for mobile */
+  body {
+    font-size: 12px;
+    /* padding: 10px; */
+   
+    width: 100%;
+    height: 100vh;
+  }
+
+  .header {
+    width: 50%;
+    height: 50vh;
+    position: sticky;
+    top: 0;
+  }
+
+  .logo1 {
+    font-size: 5px;
+    /* padding-top: 30px; */
+  }
+
+  .logo2 li {
+    font-size: 15px;
+    margin-right: 5px;
+    margin-left: -18px;
+    margin-top: 10px;
+    gap: 16px;
+  }
+
+  .btn li a {
+    font-size: 12px;
+  }
+  .article{
+    font-size: 20px;
+  }
+}
+
+.header {
+  /* background-color: #428291; */
+
+  width: 100%;
+  height: 18vh;
+  position: sticky;
+  top: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  z-index: 13;
+  /* From https://css.glass */
+  background: rgb(66, 130, 145, 0.4);
+  border-radius: none;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header:hover::after {
+  transform: scaleX(1);
+  opacity: 0.8;
+  background-color: #428291;
+}
+
+.logo1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  color: white;
+  font-family: 'Tulpen One', cursive;
+  text-shadow: 3px 4px 7px rgba(81, 67, 21, 0.8);
+  /* text-shadow: 0px 11px 10px rgba(81,67,21,0.8); */
+  font-size: 90px;
+  letter-spacing: 8px;
+  margin-top: -15px;
+}
+
+.logo2 {
+  list-style-type: none;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  float: right;
+  display: flex;
+  margin-right: 25px;
+  margin-top: -15px;
+  gap: 20px;
+  text-shadow: 0px 11px 10px rgba(81, 67, 21, 0.8);
+  color: #fff;
+}
+
+.logo2 li:hover {
+  text-shadow: 0 0 5px #ffffff,
+    0 0 10px #ffffff,
+    0 0 20px #ffffff;
+  cursor: pointer;
+}
+
+.logo3 {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 3px 4px 7px rgba(81, 67, 21, 0.8);
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.article-area{
+  width: 60%;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  gap: 30px;
+  margin-top: 150px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.4px);
+  -webkit-backdrop-filter: blur(7.4px);
+  border: none;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 30px;
+}

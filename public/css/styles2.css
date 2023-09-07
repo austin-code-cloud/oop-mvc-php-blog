@@ -1,0 +1,204 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+body {
+  background-color: #fff;
+  background-image: url(../img/pexels-pixabay-268533.jpg);
+  /* background-image: linear-gradient(25deg,#d64c7f,#ee4758 50%); */
+}
+
+
+@media screen and (min-width:480px) and (max-width:769px) {
+
+  /* for mobile */
+  body {
+    /* font-size: 12px; */
+    /* padding: 10px; */
+    /* background-color: red; */
+    width: 100%;
+    height: 100vh;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .header {
+    width: 50%;
+    height: 50vh;
+    position: sticky;
+    top: 0;
+    font-size: 30px;
+  }
+
+  .logo1 {
+    font-size: 5px;
+    /* padding-top: 30px; */
+  }
+
+  .main{
+    width: 20%;
+    font-size: 10px;
+  }
+
+   .button li a {
+    padding: 5px 10px;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .title{
+    font-size: 5px;
+  }
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #428291; */
+  width: 100%;
+  height: 17vh;
+  position: sticky;
+  top: 0;
+  background: rgb(66, 130, 145, 0.4);
+  border-radius: none;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+.logo1 {
+  padding: 20px;
+  padding-top: 50px;
+  text-shadow: 3px 4px 7px rgba(81, 67, 21, 0.8);
+  font-family: 'Tulpen One', cursive;
+  font-size: 90px;
+  letter-spacing: 8px;
+  /* font-weight: bold; */
+  color: #fff;
+  margin-top: -15px;
+}
+
+.admin {
+  display: flex;
+  justify-content: flex-end;
+  padding: 50px;
+  padding-top: 90px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: -15px;
+}
+
+.section-one {
+  width: 100%;
+  height: 25vh;
+  margin-top: 8%;
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.4px);
+  -webkit-backdrop-filter: blur(7.4px);
+  border: none;
+}
+
+.title {
+  padding: 30px;
+  padding-top: 100px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+
+}
+
+.button {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  border: none;
+  background: none;
+  /* font-weight: 600; */
+  /* font-family: sans-serif; */
+  margin-top: 15px;
+
+}
+
+
+.main {
+  width:80%;
+  /* max-width: 100%; */
+  margin-top: 70px;
+  margin-left: 10%;
+  margin-right: 10%;
+  /* background-color: #f44336; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.button li {
+  list-style-type: none;
+  padding-top: 100px;
+
+}
+
+.button li a {
+  color: #fff;
+  text-decoration: none;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .1),
+    7px 7px 20px 0px rgba(0, 0, 0, .2),
+    4px 4px 5px 0px rgba(0, 0, 0, .2);
+  outline: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  border-radius: 5px;
+  padding: 7px 10px;
+}
+.button li a:hover{
+  background: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.4) 100%);
+}
+
+.create-new-post {
+  /* display: inline; */
+  /* justify-content: flex-end; */
+  /* float: right; */
+  margin: 40px;
+  /* background-color: #fff; */
+  text-align: right;
+  color: #fff;
+  padding-right: 40px;
+}
+
+.create-new-post a {
+  color: white;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  text-decoration: none;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+  7px 7px 20px 0px rgba(0, 0, 0, .1),
+  4px 4px 5px 0px rgba(0, 0, 0, .1);
+  border-radius: 5px;
+  padding: 10px 25px;
+  background: transparent;
+  outline: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+}
+.create-new-post a:hover{
+  background: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.4) 100%);
+}

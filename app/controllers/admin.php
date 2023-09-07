@@ -10,7 +10,7 @@ class Admin extends Controller
         $HomePost = $this->model('post');
         $HomePost->loadPost();
 
-        $this->views('home/index', ['data' => $HomePost->loadPost()]);
+        $this->views('index', ['data' => $HomePost->loadPost()]);
     }
 
     public function signIn()
@@ -36,7 +36,7 @@ class Admin extends Controller
 
             if (!$verifyPwd) {
                 $_SESSION['message'] = 'Invalid username or password';
-                $this->views('auth/auth', ['message' => 'Invalid username or password']);
+                $this->views('auth', ['message' => 'Invalid username or password']);
             } else {
 
 
@@ -50,7 +50,7 @@ class Admin extends Controller
                 $this->views('admin', ['user' => $userLogin, 'authorpost' => $result]);
             }
         } else {
-            $this->views('auth/auth', ['message' => 'Invalid username or password']);
+            $this->views('auth', ['message' => 'Invalid username or password']);
         }
     }
 
@@ -79,7 +79,7 @@ class Admin extends Controller
                 $HomePost = $this->model('post');
                 $HomePost->loadPost();
 
-                $this->views('auth/auth', ['message' => 'User already exist!!!! Sign-In']);
+                $this->views('auth', ['message' => 'User already exist!!!! Sign-In']);
             } else {
 
                 $registerUser = $this->model('auth');
@@ -99,7 +99,7 @@ class Admin extends Controller
                 $this->views('admin', ['user' => $userLogin, 'authorpost' => $result]);
             }
         } else {
-            $this->views('auth/auth', ['message' => 'Sign Up']);
+            $this->views('auth', ['message' => 'Sign Up']);
         }
     }
 
@@ -110,14 +110,14 @@ class Admin extends Controller
         $HomePost = $this->model('post');
         $HomePost->loadPost();
 
-        header('location: home/index');
+        header('location: index');
     }
 
     public function checkUsr()
     {
 
         if (!isset($_SESSION['user'])) {
-            $this->views('auth/auth', ['message' => 'user does not exist']);
+            $this->views('auth', ['message' => 'user does not exist']);
         } else if (isset($_SESSION['user'])) {
 
             $loginUser = $this->model('auth');
@@ -148,7 +148,7 @@ class Admin extends Controller
             $HomePost = $this->model('post');
             $HomePost->loadPost();
 
-            $this->views('home/index', ['data' => $HomePost->loadPost()]);
+            $this->views('index', ['data' => $HomePost->loadPost()]);
         } else {
 
             $this->views('createpost', ['message' => 'Input Post Details']);
@@ -191,9 +191,6 @@ class Admin extends Controller
 
             // Append the requested resource location to the URL
             $link .= $_SERVER['REQUEST_URI'];
-
-            // Print the link
-            echo $link;
 
             // Print the link
             $url = explode('/', filter_var(rtrim($link, '/'), FILTER_SANITIZE_URL));
