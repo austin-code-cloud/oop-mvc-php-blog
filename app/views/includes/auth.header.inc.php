@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Neon</title>
+    <title>Neon — Sign up</title>
     <script>
         if (typeof(Storage) !== 'undefined') {
             let themeMode = document.documentElement.getAttribute('data-theme');
@@ -41,18 +41,13 @@
             }
         }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
     <link href="<?php echo BASEURL; ?>/css/style.min5f88.css" rel="stylesheet">
-    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 
     <style>
         :root:not([data-theme=dark]) {
             --body-background-color: #F9F9FF;
         }
     </style>
-
     <style id="gh-members-styles">
         .gh-post-upgrade-cta-content,
         .gh-post-upgrade-cta {
@@ -119,21 +114,7 @@
             opacity: 0.92;
         }
     </style>
-    <script async src="https://js.stripe.com/v3/"></script>
-    <script defer src="../cdn.jsdelivr.net/ghost/sodo-search%40_1.1/umd/sodo-search.min.js" data-key="c89a12a5e85bbc31c4e928df8a" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://neon.gbjsolution.com/" crossorigin="anonymous"></script>
-
-    <script defer src="public/cards.min5f88.js?v=e1a38e9aad"></script>
-    <link rel="stylesheet" type="text/css" href="<?php echo BASEURL; ?>/css/cards.min5f88.css">
-    <script defer src="public/comment-counts.min5f88.js?v=e1a38e9aad" data-ghost-comments-counts-api="https://neon.gbjsolution.com/members/api/comments/counts/"></script>
-    <script defer src="public/member-attribution.min5f88.js?v=e1a38e9aad"></script>
-    <script>
-        const introStyle = localStorage.getItem('intro-style');
-        if (introStyle !== null) {
-            document.documentElement.setAttribute('data-intro', introStyle);
-        } else {
-            document.documentElement.setAttribute('data-intro', 'one');
-        }
-    </script>
+   
     <style>
         .cover {
             display: none;
@@ -171,7 +152,7 @@
     </style>
 </head>
 
-<body class="home-template" data-nav="normal">
+<body class="page-template page-signup tag-hash-import-2023-08-28-09-40">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="global-icons" style="display:none">
         <symbol id="i-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path fill="none" d="M0 0h24v24H0z" />
@@ -235,60 +216,30 @@
         </symbol>
     </svg>
     <div class="site-wrap">
-        <header class="site-header">
-            <div class="container">
-                <div class="header-inner flex justify-space-between">
-                    <div class="header-logo">
-                        <a href="<?php echo BASEURL; ?>" class="logo-image theme-light-logo">
-                            <img src="<?php echo BASEURL; ?>images/logo-dark.svg" alt="Neon">
-                        </a>
-                        <a href="index.html" class="logo-image theme-dark-logo">
-                            <img src="<?php echo BASEURL; ?>images/logo-light.svg" alt="Neon">
-                        </a>
-                    </div>
-                    <input id="mobile-menu-toggle" class="mobile-menu-checkbox" type="checkbox">
-                    <label for="mobile-menu-toggle" class="mobile-menu-icon" aria-label="menu toggle button">
-                        <span class="line"></span>
-                        <span class="line"></span>
-                        <span class="line"></span>
-                        <span class="sr-only">Menu toggle button</span>
-                    </label>
-                    <nav class="nav-wrap flex" role="navigation" aria-label="main navigation">
-                        <ul class="nav-item-container nav-left no-style-list flex" role="menu">
-                            <li class="nav-item" role="menuitem">
-                                <a href="<?php echo BASEURL; ?>home/tags" class="nav-link">Tags</a>
-                            </li>
-                            <li class="nav-item" role="menuitem">
-                                <a href="<?php echo BASEURL; ?>home/authors" class="nav-link">Authors</a>
-                            </li>
-                        </ul>
-                        <div class="nav-center icon-items-wrap flex">
-                            <button href="javascript:;" class="nav-icon search-icon flex" data-ghost-search>
-                                <span><svg>
-                                        <use xlink:href="#i-search"></use>
-                                    </svg></span>
-                            </button>
-                            <button href="javascript:;" class="nav-icon theme-icon flex js-toggle-dark-light" aria-label="Toggle theme">
-                                <div class="toggle-mode flex">
-                                    <div class="light"><svg>
-                                            <use xlink:href="#i-sun"></use>
-                                        </svg></div>
-                                    <span class="dark"><svg>
-                                            <use xlink:href="#i-moon"></use>
-                                        </svg></span>
-                                </div>
-                            </button>
-                        </div>
-                        <ul class="nav-item-container nav-right no-style-list flex">
-                            <li class="nav-item" role="menuitem">
-                                <a href="<?php echo BASEURL; ?>home/signin" class="nav-link">Sign in</a>
-                            </li>
-                            <li class="nav-item" role="menuitem">
-                                <a href="<?php echo BASEURL; ?>home/membership" class="btn btn-sm">Become member</a>
-                            </li>
-                        </ul>
-                    </nav>
 
-                </div>
-            </div>
-        </header>
+
+        <style type="text/css">
+            .responsive-header-img {
+                background-image: url(https://images.unsplash.com/photo-1521080755838-d2311117f767?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxtaW5pbWFsJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE2NzE0NTQwNjc&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1400);
+            }
+
+            @media(max-width: 1000px) {
+                .responsive-header-img {
+                    background-image: url(https://images.unsplash.com/photo-1521080755838-d2311117f767?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxtaW5pbWFsJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE2NzE0NTQwNjc&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1200);
+                    background-image: -webkit-image-set(url(https://images.unsplash.com/photo-1521080755838-d2311117f767?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxtaW5pbWFsJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE2NzE0NTQwNjc&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1200) 1x,
+                            url(https://images.unsplash.com/photo-1521080755838-d2311117f767?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxtaW5pbWFsJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE2NzE0NTQwNjc&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1400) 2x);
+                    background-image: image-set(url(https://images.unsplash.com/photo-1521080755838-d2311117f767?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxtaW5pbWFsJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE2NzE0NTQwNjc&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1200) 1x,
+                            url(https://images.unsplash.com/photo-1521080755838-d2311117f767?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxtaW5pbWFsJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE2NzE0NTQwNjc&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1400) 2x);
+                }
+            }
+
+            @media(max-width: 600px) {
+                .responsive-header-img {
+                    background-image: url(https://images.unsplash.com/photo-1521080755838-d2311117f767?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxtaW5pbWFsJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE2NzE0NTQwNjc&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=600);
+                    background-image: -webkit-image-set(url(https://images.unsplash.com/photo-1521080755838-d2311117f767?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxtaW5pbWFsJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE2NzE0NTQwNjc&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=600) 1x,
+                            url(https://images.unsplash.com/photo-1521080755838-d2311117f767?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxtaW5pbWFsJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE2NzE0NTQwNjc&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1200) 2x);
+                    background-image: image-set(url(https://images.unsplash.com/photo-1521080755838-d2311117f767?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxtaW5pbWFsJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE2NzE0NTQwNjc&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=600) 1x,
+                            url(https://images.unsplash.com/photo-1521080755838-d2311117f767?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxtaW5pbWFsJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE2NzE0NTQwNjc&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1200) 2x);
+                }
+            }
+        </style>

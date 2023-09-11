@@ -145,10 +145,8 @@ class Admin extends Controller
             $newPost->newPost($postTitle, $postContent, $userLogin[0]['id']);
 
             //GOING TO ADMIN PAGE
-            $HomePost = $this->model('post');
-            $HomePost->loadPost();
 
-            $this->views('index', ['data' => $HomePost->loadPost()]);
+            header('location: index');
         } else {
 
             $this->views('createpost', ['message' => 'Input Post Details']);

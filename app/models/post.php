@@ -19,15 +19,28 @@ class Post extends Dbh
     }
 
     public function loadPost()
-    {
 
+    {
         $sql = "SELECT title, content, id FROM blog_posts ORDER BY id DESC";
         $stmt = $this->connect()->query($sql);
+        
+        while ($row = $stmt->fetchAll()) {
+            return $row;
+        }
+    }
+
+    public function pagination($start, $limit)
+
+    {
+        $sql = "SELECT * FROM blog_posts ORDER BY id DESC LIMIT $start, $limit";
+        $stmt = $this->connect()->query($sql);
+        $q = $stmt->rowCount();
 
         while ($row = $stmt->fetchAll()) {
             return $row;
         }
     }
+
 
     public function loadPostForAuthor($author_id)
     {
