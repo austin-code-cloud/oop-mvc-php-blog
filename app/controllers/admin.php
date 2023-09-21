@@ -12,6 +12,11 @@ class Admin extends Controller
 
         $this->views('index', ['data' => $HomePost->loadPost()]);
     }
+    public function panel()
+    {
+
+        $this->views('panel/panel');
+    }
 
     public function signIn()
     {
