@@ -1,14 +1,16 @@
-<html lang="en">
+
 
 <head>
 
     <meta charset="utf-8" />
-    <title>Vertical | Symox - Admin & Dashboard Template</title>
+    <title>Neon Blog Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="<?php echo BASEURL; ?>panel/assets/images/favicon.ico">
+
+    <link href="assets/libs/fullcalendar/main.min.css" rel="stylesheet" type="text/css" />
 
     <!-- quill css -->
     <link href="<?php echo BASEURL; ?>panel/assets/libs/quill/quill.core.css" rel="stylesheet" type="text/css" />
@@ -37,19 +39,19 @@
                     <div class="navbar-brand-box">
                         <a href="index.html" class="logo logo-dark">
                             <span class="logo-sm">
-                                <img src="<?php echo BASEURL; ?>panel/assets/images/logo-sm.svg" alt="" height="22">
+                                <img src="<?php echo BASEURL; ?>images/logo-light.svg" alt="" height="22">
                             </span>
                             <span class="logo-lg">
-                                <img src="<?php echo BASEURL; ?>panel/assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">Symox</span>
+                                <img src="<?php echo BASEURL; ?>images/logo-light.svg" alt="" height="22"> <span class="logo-txt">Symox</span>
                             </span>
                         </a>
 
                         <a href="index.html" class="logo logo-light">
                             <span class="logo-sm">
-                                <img src="<?php echo BASEURL; ?>panel/assets/images/logo-sm.svg" alt="" height="22">
+                                <img src="<?php echo BASEURL; ?>images/logo-light.svg" alt="" height="22">
                             </span>
                             <span class="logo-lg">
-                                <img src="<?php echo BASEURL; ?>panel/assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">Symox</span>
+                                <img src="<?php echo BASEURL; ?>images/logo-light.svg" alt="" height="22"> <span class="logo-txt">Symox</span>
                             </span>
                         </a>
 
@@ -242,19 +244,19 @@
             <div class="navbar-brand-box">
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="<?php echo BASEURL; ?>panel/assets/images/logo-sm.svg" alt="" height="22">
+                        <img src="<?php echo BASEURL; ?>images/logo-light.svg" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="<?php echo BASEURL; ?>panel/assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">Symox</span>
+                        <img src="<?php echo BASEURL; ?>images/logo-light.svg" alt="" height="22"> <span class="logo-txt"></span>
                     </span>
                 </a>
-
+                <br>
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-lg">
-                        <img src="<?php echo BASEURL; ?>panel/assets/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">Symox</span>
+                        <img src="<?php echo BASEURL; ?>images/logo-light.svg" alt="" height="22"> <span class="logo-txt"></span>
                     </span>
                     <span class="logo-sm">
-                        <img src="<?php echo BASEURL; ?>panel/assets/images/logo-sm.svg" alt="" height="22">
+                        <img src="<?php echo BASEURL; ?>images/logo-light.svg" alt="" height="22">
                     </span>
                 </a>
             </div>
@@ -272,7 +274,7 @@
                         <li class="menu-title" data-key="t-menu">Menu</li>
 
                         <li>
-                            <a href="index.html">
+                            <a href="<?php echo BASEURL; ?>admin/panel">
                                 <i class="bx bx-tachometer icon nav-icon"></i>
                                 <span class="menu-item" data-key="t-dashboards">Dashboard</span>
                                 <span class="badge rounded-pill bg-success">5+</span>
@@ -282,14 +284,14 @@
                         <li class="menu-title" data-key="t-applications">Applications</li>
 
                         <li>
-                            <a href="apps-calendar.html">
+                            <a href="<?php echo BASEURL; ?>panel/calender">
                                 <i class="bx bx-calendar icon nav-icon"></i>
                                 <span class="menu-item" data-key="t-calendar">Calendar</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="apps-chat.html">
+                            <a href="<?php echo BASEURL; ?>panel/chat">
                                 <i class="bx bx-chat icon nav-icon"></i>
                                 <span class="menu-item" data-key="t-chat">Chat</span>
                                 <span class="badge rounded-pill bg-danger" data-key="t-hot">Hot</span>
@@ -302,8 +304,8 @@
                                 <span class="menu-item" data-key="t-email">Email</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="email-inbox.html" data-key="t-inbox">Inbox</a></li>
-                                <li><a href="email-read.html" data-key="t-read-email">Read Email</a></li>
+                                <li><a href="<?php echo BASEURL; ?>panel/emailInbox" data-key="t-inbox">Inbox</a></li>
+                                <li><a href="<?php echo BASEURL; ?>panel/readEmail" data-key="t-read-email">Read Email</a></li>
                             </ul>
                         </li>
 

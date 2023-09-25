@@ -26,5 +26,21 @@ class Panel extends Controller
     {
         $this->views('panel/addNewPost');
     }
+    public function calender ()
+    {
+        $this->views('panel/calender');
+    }
+    public function chat ()
+    {
+        $this->views('panel/chat');
+    }
+    public function emailInbox ()
+    {
+        $this->views('panel/emailInbox');
+    }
+    public function readEmail ()
+    {
+        $this->views('panel/readEmail');
+    }
 }
 

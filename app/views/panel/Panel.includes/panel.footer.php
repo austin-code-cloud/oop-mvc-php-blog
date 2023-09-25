@@ -35,6 +35,12 @@
 <script src="<?php echo BASEURL; ?>panel/assets/libs/simplebar/simplebar.min.js"></script>
 <script src="<?php echo BASEURL; ?>panel/assets/libs/feather-icons/feather.min.js"></script>
 
+<!-- plugin js -->
+<script src="assets/libs/fullcalendar/main.min.js"></script>
+
+<!-- Calendar init -->
+<script src="assets/js/pages/calendar.init.js"></script>
+
 <!-- apexcharts -->
 <script src="<?php echo BASEURL; ?>panel/assets/libs/apexcharts/apexcharts.min.js"></script>
 <!-- Chart JS -->
